@@ -1,0 +1,56 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.navigation {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  padding: 15px;
+}
+
+.navigation-menu {
+  display: flex;
+  align-items: center;
+}
+
+.navigation-menu img {
+  margin-top: 10px;
+}
+
+.navigation-menu ul {
+  display: flex;
+  list-style-type: none;
+}
+
+.navigation-menu ul li {
+  padding: 0 15px;
+}
+
+.account-auth {
+  display: flex;
+  gap: 15px;
+}
+
+.account-button {
+  padding: 5px;
+  background: none;
+  border: none;
+  color: gray;
+}
+
+.account-button:hover {
+  color: black;
+}
+.register {
+  border: 2px solid gray;
+  border-radius: 7px;
+  cursor: pointer;
+}
+.register:hover {
+  border: 2px solid black;
+  border-radius: 7px;
+  cursor: pointer;
+}
