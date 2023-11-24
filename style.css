@@ -34,6 +34,9 @@
   display: flex;
   gap: 15px;
 }
+.hamburger-menu {
+  display: none;
+}
 
 .account-button {
   padding: 5px;
@@ -104,6 +107,10 @@
   width: 81.5%;
 }
 
+.upper-side-content {
+  display: none;
+}
+
 main {
   margin-top: 5%;
   height: 100%;
@@ -113,6 +120,7 @@ main {
   padding: 17px 5px;
   background: #141414;
   color: #fff;
+  border: 2px solid #141414;
   border-radius: 15px;
   cursor: pointer;
   font-size: 18px;
