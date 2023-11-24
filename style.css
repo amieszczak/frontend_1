@@ -92,7 +92,7 @@
   justify-content: center;
   height: 100%;
   gap: 15%;
-  padding-top: 10%;
+  padding: 10px;
 }
 
 .right-side-content {
