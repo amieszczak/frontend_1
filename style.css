@@ -79,9 +79,12 @@
 }
 
 .clients {
+  width: 100%;
   display: flex;
   justify-content: space-between;
-  align-items: flex-end;
+  align-items: center;
+  gap: 5%;
+
   margin-top: auto;
 }
 
@@ -89,7 +92,7 @@
   width: 33%;
 }
 
-.left-side-content {
+.main-content {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -98,16 +101,16 @@
   padding: 10px;
 }
 
-.right-side-content {
+.image-content {
   display: flex;
   justify-content: center;
 }
 
-.right-side-content img {
+.image-content img {
   width: 81.5%;
 }
 
-.upper-side-content {
+.mobile-image-content {
   display: none;
 }
 
@@ -116,7 +119,7 @@ main {
   height: 100%;
 }
 .learn-more-button {
-  width: 33%;
+  width: 15ch;
   padding: 17px 5px;
   background: #141414;
   color: #fff;
@@ -125,8 +128,29 @@ main {
   cursor: pointer;
   font-size: 18px;
 }
+/*---------------------------------------------------------------------MEDIA-----------------------------------------------------------------------------------*/
 
-@media (max-width: 500px) {
+@media (max-width: 300px) {
+  .clients {
+    justify-content: center;
+    /* background-color: blue; */
+    width: 40%;
+  }
+
+  .client-audiophile img {
+    /* background-color: red; */
+    width: 20%;
+  }
+
+  .client img {
+    width: 10%;
+  }
+}
+
+@media (max-width: 600px) {
+  * {
+    font-size: 0.5rem;
+  }
   .navigation {
     display: flex;
     justify-content: space-between;
@@ -149,22 +173,23 @@ main {
     align-items: center;
     height: 690px;
   }
-  .right-side-content {
+  .image-content {
     display: none;
   }
-  .upper-side-content {
+  .mobile-image-content {
     display: flex;
   }
-  .upper-side-content img {
+  .mobile-image-content img {
     width: 100%;
   }
 
-  .left-side-content {
-    display: flex;
-    justify-content: center;
+  .main-content {
     text-align: center;
-    padding-top: 10%;
+    align-items: center;
     width: 100%;
+    height: 50%;
+    margin-top: 10%;
+    gap: 10%;
   }
   .middle-page-content h1 {
     color: #141414;
@@ -180,5 +205,20 @@ main {
   .learn-more-button {
     margin-left: auto;
     margin-right: auto;
+  }
+
+  .clients {
+    justify-content: center;
+
+    width: 100%;
+    gap: 10%;
+  }
+
+  .client-audiophile img {
+    width: 30ch;
+  }
+
+  .client img {
+    width: 30ch;
   }
 }
