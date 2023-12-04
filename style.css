@@ -130,27 +130,45 @@ main {
 }
 /*---------------------------------------------------------------------MEDIA-----------------------------------------------------------------------------------*/
 
-@media (max-width: 300px) {
+/* @media (max-width: 1199.98px) {
+} */
+
+@media (max-width: 991.98px) {
+  .main-content {
+    gap: 25px;
+    align-items: center;
+    text-align: center;
+    padding-top: 420px;
+    margin: 0;
+  }
+
+  .image-content {
+    display: flex;
+    justify-content: flex-start;
+  }
+  .image-content img {
+    width: 95%;
+  }
+  .column {
+    width: 50%;
+  }
   .clients {
-    justify-content: center;
-    /* background-color: blue; */
-    width: 40%;
+    margin-top: 250px;
+    width: 200%;
+    margin-left: 100%;
   }
-
-  .client-audiophile img {
-    /* background-color: red; */
-    width: 20%;
+  .client {
+    width: 100%;
   }
-
   .client img {
-    width: 10%;
+    width: 80%;
   }
 }
 
-@media (max-width: 600px) {
-  * {
+@media (max-width: 767.98px) {
+  /* * {
     font-size: 0.5rem;
-  }
+  } */
   .navigation {
     display: flex;
     justify-content: space-between;
@@ -208,17 +226,39 @@ main {
   }
 
   .clients {
-    justify-content: center;
-
     width: 100%;
+    margin-left: auto;
+    justify-content: center;
     gap: 10%;
   }
 
+  .client img {
+    width: 100%;
+  }
+}
+
+/* @media (max-width: 300px) {
+  .clients {
+    justify-content: center;
+    width: 100%;
+  }
+
   .client-audiophile img {
-    width: 30ch;
+    width: 5%;
   }
 
   .client img {
-    width: 30ch;
+    width: 10%;
+  }
+} */
+
+@media (max-width: 300px) {
+  .clients {
+    flex-wrap: wrap;
+    gap: 25%;
+    height: 100px;
+  }
+  .client {
+    width: 25%;
   }
 }
