@@ -1,26 +1,46 @@
 /*-------------------------NAV_OPTION_WEB-----------------------------*/
 
-let nav = document.querySelector("nav");
-let dropdown = document.querySelector(".features");
+const nav = document.querySelector("nav");
+const dropdownFeatures = document.querySelector(".features");
 
-dropdown.onclick = function () {
-  nav.classList.toggle("active");
-  nav.classList.remove("active1");
-};
+const dropdownCompany = document.querySelector(".company");
+const middlePageContent = document.querySelector(".middle-page-content");
 
-let dropdown1 = document.querySelector(".company");
+const careersButton = document.querySelector(
+  ".navigation-menu ul li:nth-child(3)"
+);
+const aboutButton = document.querySelector(".navigation-menu ul li:last-child");
 
-dropdown1.onclick = function () {
-  nav.classList.toggle("active1");
-  nav.classList.remove("active");
-};
+if (window.innerWidth > 660) {
+  dropdownFeatures.onclick = function () {
+    nav.classList.toggle("active-features");
+    nav.classList.remove("active-company");
+  };
 
-let middlePageContent = document.querySelector(".middle-page-content");
+  dropdownCompany.onclick = function () {
+    nav.classList.toggle("active-company");
+    nav.classList.remove("active-features");
+  };
 
-middlePageContent.onclick = function () {
-  nav.classList.remove("active");
-  nav.classList.remove("active1");
-};
+  middlePageContent.onclick = function () {
+    nav.classList.remove("active-features", "active-company");
+  };
+} else if (window.innerWidth < 660) {
+  dropdownFeatures.onclick = function () {
+    nav.classList.toggle("active-features");
+  };
+  dropdownCompany.onclick = function () {
+    nav.classList.toggle("active-company");
+  };
+}
+
+careersButton.addEventListener("click", () => {
+  nav.classList.remove("active-features", "active-company");
+});
+
+aboutButton.addEventListener("click", () => {
+  nav.classList.remove("active-features", "active-company");
+});
 
 /*-------------------------NAV_OPTION_WEB-----------------------------*/
 /*-------------------------NAV_MENU_MOBILE-----------------------------*/
@@ -36,22 +56,3 @@ menuButtonExit.onclick = function () {
 };
 
 /*-------------------------NAV_MENU_MOBILE-----------------------------*/
-/*-------------------------NAV_OPTION_MOBILE_DROPDOWN-----------------------------*/
-/*-------------------------DROPDOWN_1-----------------------------*/
-let featuresMobile = document.querySelector(".features-mobile");
-
-featuresMobile.onclick = function () {
-  nav.classList.toggle("active-mobile-dropdown-features");
-};
-
-/*-------------------------DROPDOWN_1-----------------------------*/
-/*-------------------------DROPDOWN_2-----------------------------*/
-let companyMobile = document.querySelector(".company-mobile");
-
-companyMobile.onclick = function () {
-  nav.classList.toggle("active-mobile-dropdown-company");
-};
-
-/*-------------------------DROPDOWN_2-----------------------------*/
-
-/*-------------------------NAV_OPTION_MOBILE_DROPDOWN-----------------------------*/
